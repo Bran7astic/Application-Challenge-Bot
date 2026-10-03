@@ -17,9 +17,13 @@ bot = discord.Client(intents=intents)
 
 @bot.event
 async def on_ready():
+    
+    timestamp = datetime.datetime.now(datetime.timezone.utc)
+    
+    print(timestamp)
     print(f'{bot.user.name} is ready!')
 
-    CHANNEL_ID = 1505983005548613732
+    CHANNEL_ID = 1218264549736841277
 
     channel = bot.get_channel(CHANNEL_ID)
 
@@ -28,7 +32,7 @@ async def on_ready():
             title = '🎯 LEADERBOARD',
             description="📊 The current rankings are...",
             color=discord.Color.dark_gold(),
-            timestamp=datetime.datetime.now(datetime.timezone.utc)        
+            timestamp=timestamp        
         )
     
         app_counts = get_application_counts()
@@ -52,8 +56,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    
-        
+
 
 
 

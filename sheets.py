@@ -21,5 +21,3 @@ def get_application_counts():
     }
 
     return counts
-
-print(get_application_counts())
