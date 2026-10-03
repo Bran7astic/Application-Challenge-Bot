@@ -5,3 +5,15 @@
 venv/
 .venv/
 ENV/
+
+# Logs
+cron.log
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS generated files
+.DS_Store
+Thumbs.db
