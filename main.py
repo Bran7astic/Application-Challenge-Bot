@@ -43,6 +43,8 @@ async def on_ready():
         embed.add_field(name="Wanna join?", value="Add a sheet with your name to the [Application Tracker](https://docs.google.com/spreadsheets/d/13mV8ePdSnflnxogMRZGRWnJmrITVoxhn0Qt0gc0DKYA/edit?gid=1490322798#gid=1490322798)!", inline=False)
 
         await channel.send(embed=embed)
+        print("Closing bot connection...")
+        await bot.close()
     else: 
         print("Channel not found.")    
 
