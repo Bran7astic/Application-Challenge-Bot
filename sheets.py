@@ -16,7 +16,7 @@ count_cell = 'B4'
 def get_application_counts():
 
     counts = {
-        sheet.title : sheet.acell(count_cell).value
+        sheet.title : int(sheet.acell(count_cell).value)
         for sheet in sh.worksheets()
     }
 
